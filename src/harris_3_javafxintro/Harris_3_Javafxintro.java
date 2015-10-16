@@ -40,6 +40,7 @@ public class Harris_3_Javafxintro extends Application {
         drawLotsOfCircles(gc, 500);
         drawLotsOfCirclesReverse(gc, 500);
         drawTriangleBottom(gc); 
+        drawTriangleTop(gc);
         writeThisTotallyDeservesaONEHUNDRED(gc);
         root.getChildren().add(canvas);
         primaryStage.setScene(new Scene(root));
@@ -68,7 +69,19 @@ public class Harris_3_Javafxintro extends Application {
     }
     private void drawTriangleBottom(GraphicsContext gc){
         gc.setFill(Color .BLUEVIOLET);
-        gc.fillPolygon (new double[]{0, 1000, 500},new double[]{750,750,400}, 3);
+        gc.fillPolygon (new double[]{0, 500, 1000},new double[]{1000,650,1000}, 3);
+    }
+    private void drawTriangleTop(GraphicsContext gc){
+        gc.setFill(Color .CYAN);
+        gc.fillPolygon (new double[]{0, 500, 1000},new double[]{300,650,300}, 3);
+    }
+    private void drawTriangleRight(GraphicsContext gc){
+        gc.setFill(Color .BLUEVIOLET);
+        gc.fillPolygon (new double[]{0, 500, 1000},new double[]{1000,650,1000}, 3);
+    }
+    private void drawTriangleLeft(GraphicsContext gc){
+        gc.setFill(Color .BLUEVIOLET);
+        gc.fillPolygon (new double[]{0, 500, 1000},new double[]{1000,650,1000}, 3);
     }
     private void drawSomeCircles(GraphicsContext gc, int num1, int num2, int num3 ) {
         gc.setFill(Color .SKYBLUE);
@@ -76,13 +89,13 @@ public class Harris_3_Javafxintro extends Application {
     }
     private void drawLotsOfCircles(GraphicsContext gc, int num) {
         for(int i = 0; i<num; i++){
-            drawSomeCircles(gc, -25*i, (i*25), 25);
+            drawSomeCircles(gc, 25*i, (i*25), 25);
 
         }
     }
     private void drawLotsOfCirclesReverse(GraphicsContext gc, int num) {
         for(int t = 0; t<num; t++){
-            drawSomeCircles(gc, 36*t, (t*25), 25);
+            drawSomeCircles(gc, 25*t, (t*25), 25);
         }
     }
     private void writeThisTotallyDeservesaONEHUNDRED(GraphicsContext gc){
