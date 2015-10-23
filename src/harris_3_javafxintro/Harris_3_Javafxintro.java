@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package harris_3_javafxintro;
+ package harris_3_javafxintro;
 
 import javafx.application.Application;
 import javafx.scene.Group;
@@ -14,17 +9,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import javafx.stage.Stage;
 
-/**
- *
- * @author Data4Life
- */
+
 public class Harris_3_Javafxintro extends Application {
     
-    
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }
@@ -39,6 +26,7 @@ public class Harris_3_Javafxintro extends Application {
         drawHouse(gc);
         drawLotsOfCircles(gc, 500);
         drawLotsOfCirclesReverse(gc, 500);
+        drawTrialngleLeftandRight(gc);
         drawTriangleBottom(gc); 
         drawTriangleTop(gc);
         writeThisTotallyDeservesaONEHUNDRED(gc);
@@ -49,7 +37,7 @@ public class Harris_3_Javafxintro extends Application {
     }
     
     private void drawHouse(GraphicsContext gc) {
-        gc.fillText("My House", 42, 42);
+        gc.fillText("My Drawings", 740, 15);
         gc.strokeRect(87, 56, 50, 60);
         gc.strokeRect(25, 32, 50, 60);
         gc.strokeRect(52, 113, 150, 60);
@@ -59,13 +47,19 @@ public class Harris_3_Javafxintro extends Application {
     }
     
     private void drawBackroud(GraphicsContext gc){
-        gc.strokeRect(1000,1000,1000,1000);
+        gc.setStroke(Color .DARKOLIVEGREEN);
+        gc.strokeRect(0,0,1000,1000);
         gc.fillRect(0, 0, 1000, 1000);
     }
     private void drawShapes(GraphicsContext gc) {
         gc.setFill(Color .BLUEVIOLET);
         gc.setStroke(Color .GOLD);
         
+    }
+    private void drawTrialngleLeftandRight(GraphicsContext gc) {
+        gc.strokeRect(0,300,1000,1000);
+        gc.setStroke(Color.web ("BLANCHEDALMOND", 1));
+        gc.setFill(Color.web ("DARKORANGE"));
     }
     private void drawTriangleBottom(GraphicsContext gc){
         gc.setFill(Color .BLUEVIOLET);
@@ -99,7 +93,7 @@ public class Harris_3_Javafxintro extends Application {
         }
     }
     private void writeThisTotallyDeservesaONEHUNDRED(GraphicsContext gc){
-        gc.fillText("This Totally Deserves a ONE HUNDRED", 740, 15);
+        gc.fillText("This Totally Deserves a ONE HUNDRED", 740, 30);
     }
     
 }
